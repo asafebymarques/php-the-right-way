@@ -1,57 +1,58 @@
-# PHP: The Right Way
+# PHP: Do Jeito Certo
 
-## Overview
+## Sobre
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Este é o repositório GitHub Pages para o projeto _PHP: Do Jeito Certo_, tradução brasileira do projeto _PHP: The Right Way_ project.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Este website é um projeto Jekyll.
+* Cada seção e subseção são arquivos Markdown em `_posts/`.
+* Subseções possuem `isChild: true` em seu cabeçalho.
+* A navegação e a estrutura de páginas são geradas automaticamente.
 
-## Spread the Word!
+## Espalhe a palavra!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+_PHP: Do Jeito Certo_ possui banners que você pode usar em seu site. Mostre seu apoio e permita que novos desenvolvedores PHP saibam onde encontrar boas informações!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Veja os banners](http://br.phptherightway.com/banners.html)
 
-## How to Contribute
+## Como contribuir
 
-You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+Você deve ler o arquivo `CONTRIBUTING.md` para instruções e dicas precisas. Mas se você prefere um TL;DR:
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+1. Faça um fork e edite
+2. Opcionalmente, você pode instalar o [Ruby](https://rvm.io/rvm/install/) com a gem [Jekyll](https://github.com/mojombo/jekyll/) para visualizar localmente
+3. Envie um pull request para consideração
 
-### Contributor Style Guide
+[Instalar utilizando o Vagrant](vagrant.md)
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+### Guia de estilo para o contribuidor
 
-## Where
+1. Use a grafia do Português do Brasil neste repositório.
+2. Use quatro (4) espaços para indentar o texto; não use TAB.
+3. Limite todo texto a 120 caracteres.
+4. Os códigos de exemplo devem seguir a PSR-1 ou superior.
 
-<http://www.phptherightway.com>
+## Onde
 
-* [English](http://www.phptherightway.com)
-* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
-* [Español](http://phpdevenezuela.github.io/php-the-right-way)
-* [Français](http://eilgin.github.io/php-the-right-way/)
-* [Indonesia](http://id.phptherightway.com)
+<http://br.phptherightway.com>
+
+* [Inglês](http://www.phptherightway.com)
+* [Alemão](http://rwetzlmayr.github.io/php-the-right-way)
+* [Espanhol](http://phpdevenezuela.github.io/php-the-right-way)
+* [Francês](http://eilgin.github.io/php-the-right-way/)
+* [Indonésio](http://id.phptherightway.com)
 * [Italiano](http://it.phptherightway.com)
-* [Polski](http://pl.phptherightway.com)
+* [Polonês](http://pl.phptherightway.com)
 * [Português do Brasil](http://br.phptherightway.com)
-* [Română](https://bgui.github.io/php-the-right-way/)
-* [Slovenščina](http://sl.phptherightway.com)
-* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
-* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
-* [български](http://bg.phptherightway.com)
-* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
-* [Українська](http://iflista.github.com/php-the-right-way)
-* [العربية](https://adaroobi.github.io/php-the-right-way/)
-* [فارسى](http://novid.github.io/php-the-right-way/)
+* [Romeno](https://bgui.github.io/php-the-right-way/)
+* [Esloveno](http://sl.phptherightway.com)
+* [Sérvio](http://phpsrbija.github.io/php-the-right-way/)
+* [Turco](http://hkulekci.github.io/php-the-right-way/)
+* [Búlgaro](http://bg.phptherightway.com)
+* [Russo](http://getjump.github.io/ru-php-the-right-way)
+* [Ucraniano](http://iflista.github.com/php-the-right-way)
+* [Arábico](https://adaroobi.github.io/php-the-right-way/)
+* [Persa](http://novid.github.io/php-the-right-way/)
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
 * [한국어판](http://modernpug.github.io/php-the-right-way)
 * [日本語](http://ja.phptherightway.com)
