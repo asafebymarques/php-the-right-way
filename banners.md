@@ -1,90 +1,90 @@
 ---
-layout: default
-title: Banners para divulgação
-description: "Espalhe a palavra! Use estes banners para permitir que novos programadores PHP saibam sobre PHP: Do Jeito 
-Certo"
+layout: page
+title: Website Banners
+description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
+sitemap: true
 ---
 
-# Banners para divulgação
+# Web Banners
 
-Espalhe a palavra com os banners _PHP: Do Jeito Certo_! Mostre à novos programadores PHP onde encontrar boa informação.
+Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
 
-## Botão 1 (120x90)
+## Button 1 (120x90)
 
-<p><img src="{{ site.baseurl }}images/banners/btn1-120x90.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/btn1-120x90.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Botão 2 (120x60)
+## Button 2 (120x60)
 
-<p><img src="{{ site.baseurl }}images/banners/btn2-120x60.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/btn2-120x60.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
 ## Leaderboard (728x90)
 
-<p><img src="{{ site.baseurl }}images/banners/leaderboard-728x90.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/leaderboard-728x90.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Retângulo Grande (386x280)
+## Large Rectangle (386x280)
 
-<p><img src="{{ site.baseurl }}images/banners/lg-rect-386x280.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/lg-rect-386x280.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Retângulo Médio (300x250)
+## Medium Rectangle (300x250)
 
-<p><img src="{{ site.baseurl }}images/banners/med-rect-300x250.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/med-rect-300x250.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Retângulo (180x150)
+## Rectangle (180x150)
 
-<p><img src="{{ site.baseurl }}images/banners/rect-180x150.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/rect-180x150.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/rect-180x150.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/rect-180x150.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Botão Quadrado (125x125)
+## Square Button (125x125)
 
-<p><img src="{{ site.baseurl }}images/banners/sq-btn-125x125.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/sq-btn-125x125.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}
 
-## Retângulo Vertical (240x400)
+## Vertical Rectangle (240x400)
 
-<p><img src="{{ site.baseurl }}images/banners/vert-rect-240x400.png" alt="PHP: Do Jeito Certo"/></p>
+<p><img src="/images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
-    <a href="http://br.phptherightway.com">
-        <img src="http://br.phptherightway.com/images/banners/vert-rect-240x400.png" alt="PHP: Do Jeito Certo"/>
-    </a>
+<a href="http://www.phptherightway.com">
+    <img src="http://www.phptherightway.com/images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/>
+</a>
 {% endhighlight %}

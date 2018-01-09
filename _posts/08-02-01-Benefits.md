@@ -1,23 +1,21 @@
 ---
 isChild: true
-title: Benefícios
-anchor: templating_benefits
+anchor:  templating_benefits
 ---
 
-## Benefícios {#templating_benefits_title}
+## Benefits {#templating_benefits_title}
 
-O principal benefício de se utilizar templates é a clara separação que eles criam entre a lógica de apresentação e o 
-resto da sua aplicação. Templates têm a responsabilidade exclusiva de exibir o conteúdo formatado. Eles não são 
-responsáveis por pesquisa de dados, persistência ou outras tarefas mais complexas. Isto leva a código mais limpo, mais 
-legível que é especialmente útil em um ambiente de equipe, onde os desenvolvedores trabalham no código do lado do 
-servidor (controladores, modelos) e designers trabalham no código do lado do cliente (markup).
+The main benefit to using templates is the clear separation they create between the presentation logic and the rest of
+your application. Templates have the sole responsibility of displaying formatted content. They are not responsible for
+data lookup, persistence or other more complex tasks. This leads to cleaner, more readable code which is especially
+helpful in a team environment where developers work on the server-side code (controllers, models) and designers work on
+the client-side code (markup).
 
-Os templates também melhoram a organização do código de apresentação. Os templates são normalmente colocados em uma 
-pasta "views", cada um definido dentro de um único arquivo. Essa abordagem incentiva a reutilização de código, onde 
-grandes blocos de código são quebrados em pequenos pedaços reutilizáveis, chamados frequentemente de partials. Por 
-exemplo, o cabeçalho e o rodapé do site de cada um pode ser definido como templates, que são então incluídos antes e 
-depois de cada template de página.
+Templates also improve the organization of presentation code. Templates are typically placed in a "views" folder, each
+defined within a single file. This approach encourages code reuse where larger blocks of code are broken into smaller,
+reusable pieces, often called partials. For example, your site header and footer can each be defined as templates,
+which are then included before and after each page template.
 
-Finalmente, dependendo da biblioteca que você usa, os templates podem oferecer mais segurança ao escapar automaticamente 
-o conteúdo gerado pelo usuário. Algumas bibliotecas oferecem até mesmo sand-boxing, onde os criadores de templates só 
-têm acesso à white-listed (lista branca) de variáveis e funções.
+Finally, depending on the library you use, templates can offer more security by automatically escaping user-generated
+content. Some libraries even offer sand-boxing, where template designers are only given access to white-listed
+variables and functions.

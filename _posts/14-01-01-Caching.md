@@ -1,10 +1,8 @@
 ---
-title: Cache
-anchor: cache
+anchor: caching
 ---
 
-# Cache {#cache_title}
+# Caching {#caching_title}
 
-O PHP é bem rápido por si só, mas gargalos podem aparecer quando você faz conexões remotas, ou carrega arquivos etc.
-Felizmente, existem várias ferramentas disponíveis para acelerar certas partes de sua aplicação, ou para reduzir o
-número de vezes que essas tarefas, que tomam tempo, precisem ser executadas.
+PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
+Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time-consuming tasks need to run.

@@ -1,6 +1,6 @@
 ---
-title: Começando
-anchor: comecando
+anchor: getting_started
 ---
 
-# Começando {#comecando_title}
+# Getting Started {#getting_started_title}
+

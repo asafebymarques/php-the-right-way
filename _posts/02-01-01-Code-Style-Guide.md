@@ -1,54 +1,70 @@
 ---
-title: Guia de estilo de código
-anchor: guia_de_estilo_de_codigo
+anchor: code_style_guide
 ---
 
-# Guia de estilo de código {#guia_de_estilo_de_codigo_title}
+# Code Style Guide {#code_style_guide_title}
 
-A comunidade PHP é grande e diversa, composta por inúmeras bibliotecas, frameworks e componentes. É comum para
-desenvolvedores PHP escolher vários destes e combiná-los em um único projeto. É importante que código PHP siga (o mais 
-próximo possível) um estilo de código comum para que desenvolvedores PHP possam misturar várias bibliotecas em seus 
-projetos.
+The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
+PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
+(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
+their projects.
 
-O [Framework Interop Group][fig] propôs e aprovou uma série de recomendações de estilo, conhecidas como [PSR-0][psr0],
-[PSR-1][psr1], [PSR-2][psr2] e [PSR-4][psr4]. Não deixe os nomes estranhos confundí-lo, estas recomendações são 
-meramente um conjunto de regras que projetos como Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium etc. 
-estão começando a adotar. Você pode utilizá-las para seus próprios projetos, ou continuar utilizando seu estilo pessoal.
+The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
+to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
+recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
+FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
+personal style.
 
-Idealmente você deveria escrever código PHP que adere a um ou mais destes padrões. Pode ser qualquer combinação das
-PSR's, ou um dos padrões de código feitos pela PEAR ou Zend. Isso significa que outros desenvolvedores podem facilmente
-ler e trabalhar no seu código, e aplicações que implementem os componentes possam ter consistência, mesmo trabalhando
-com bastante código de terceiros.
+Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
+of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
+applications that implement the components can have consistency even when working with lots of third-party code.
 
-* [Leia sobre a PSR-0][psr0]
-* [Leia sobre a PSR-1][psr1]
-* [Leia sobre a PSR-2][psr2]
-* [Leia sobre a PSR-4][psr4]
-* [Leia sobre os Padrões de Código da PEAR][pear-cs]
-* [Leia sobre os Padrões de Código do Symfony][symfony-cs]
+* [Read about PSR-0][psr0]
+* [Read about PSR-1][psr1]
+* [Read about PSR-2][psr2]
+* [Read about PSR-4][psr4]
+* [Read about PEAR Coding Standards][pear-cs]
+* [Read about Symfony Coding Standards][symfony-cs]
 
-Você pode usar o [PHP_CodeSniffer][phpcs] para checar seu código contra qualquer uma dessas recomendações e plugins
-para editores de texto como o [Sublime Text 2][st-cs] para fazer a verificação em tempo real.
+You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
+editors like [Sublime Text][st-cs] to be given real-time feedback.
 
-Você pode corrigir o estilo do código com uma das duas possíveis ferramentas. Uma é a
-[PHP Coding Standards Fixer][phpcsfixer] do Fabien Potencier que tem uma base de código muito bem testada. É maior
-e mais lenta, mas muito estável e usada por grandes projetos como Magento e Symfony. Outra opção é a [php.tools][phptools],
-que se tornou popular pelo plugin [sublime-phpfmt][sublime-phpfmt] do sublime. Apesar de ser mais novo ela tem grandes
-melhorias no desempenho fazendo com que a correção do estilo de código em tempo real seja mais fluída.
+You can fix the code layout automatically by using one of the following tools:
 
-O Inglês é o idioma preferido para todos os nomes simbólicos e para a infra-estrutura do código. Comentários devem
-ser escritos em qualquer idioma que possa ser facilmente lido por todos os atuais e futuros desenvolvedores que
-possam trabalhar nessa base de código.
+- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
+- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+
+And you can run phpcs manually from shell:
+
+    phpcs -sw --standard=PSR2 file.php
+
+It will show errors and describe how to fix them.
+It can also be helpful to include this command in a git hook.
+That way, branches which contain violations against the chosen standard cannot enter the repository until those
+violations have been fixed.
+
+If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
+[PHP Code Beautifier and Fixer][phpcbf].
+
+    phpcbf -w --standard=PSR2 file.php
+
+Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
+It will show which kind of errors the code structure had before it fixed them.
+
+    php-cs-fixer fix -v --level=psr2 file.php
+
+English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
+readable by all current and future parties who may be working on the codebase.
+
 
 [fig]: http://www.php-fig.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-[psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr1]: http://www.php-fig.org/psr/psr-1/
+[psr2]: http://www.php-fig.org/psr/psr-2/
+[psr4]: http://www.php-fig.org/psr/psr-4/
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt

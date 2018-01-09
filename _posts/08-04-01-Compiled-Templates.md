@@ -1,26 +1,22 @@
 ---
 isChild: true
-title: Templates Compilados
-anchor: compiled_templates
+anchor:  compiled_templates
 ---
 
-## Templates Compilados {#compiled_templates_title}
+## Compiled Templates {#compiled_templates_title}
 
-Enquanto o PHP evoluiu para uma linguagem orientada a objetos madura, ele 
-[não melhorou muito](http://fabien.potencier.org/article/34/templating-engines-in-php) como uma linguagem de templates.
-Templates compilados, como [Twig](http://twig.sensiolabs.org/) ou [Smarty](http://www.smarty.net/)*, preenchem este 
-vazio oferecendo uma nova sintaxe que foi direcionada especificamente para templating. De escape automático, à herança 
-e estruturas de controle simplificadas, templates compilados são projetados para ser mais fácil de escrever, simples de 
-ler e mais seguro de usar.
-Templates compilados pode ser até compartilhados entre diferentes linguagens, [Mustache](http://mustache.github.io/) 
-vem sendo um bom exemplo disso. Uma vez que esses templates devem ser compilados há uma pequena queda de performance, 
-no entanto, este é mínimo quando o cache apropriado é usado.
+While PHP has evolved into a mature, object oriented language, it [hasn't improved much][article_templating_engines] as
+a templating language. Compiled templates, like [Twig], [Brainy], or [Smarty]*, fill this void by offering a new syntax that has
+been geared specifically to templating. From automatic escaping, to inheritance and simplified control structures,
+compiled templates are designed to be easier to write, cleaner to read and safer to use. Compiled templates can even be
+shared across different languages, [Mustache] being a good example of this. Since these templates must be compiled
+there is a slight performance hit, however this is very minimal when proper caching is used.
 
-** Enquanto Smarty oferece escape automático, este recurso NÃO está habilitado por padrão.*
+**While Smarty offers automatic escaping, this feature is NOT enabled by default.*
 
-### Exemplo simples de um template compilado
+### Simple example of a compiled template
 
-Utilizando a biblioteca [Twig](http://twig.sensiolabs.org/).
+Using the [Twig] library.
 
 {% highlight html+jinja %}
 {% raw %}
@@ -33,13 +29,13 @@ Utilizando a biblioteca [Twig](http://twig.sensiolabs.org/).
 {% endraw %}
 {% endhighlight %}
 
-### Exemplo de templates compilados usando herança
+### Example of compiled templates using inheritance
 
-Utilizando a biblioteca [Twig](http://twig.sensiolabs.org/).
+Using the [Twig] library.
 
 {% highlight html+jinja %}
 {% raw %}
-// template.php
+// template.html
 
 <html>
 <head>
@@ -56,9 +52,9 @@ Utilizando a biblioteca [Twig](http://twig.sensiolabs.org/).
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
-// user_profile.php
+// user_profile.html
 
 {% extends "template.html" %}
 
@@ -69,3 +65,10 @@ Utilizando a biblioteca [Twig](http://twig.sensiolabs.org/).
 {% endblock %}
 {% endraw %}
 {% endhighlight %}
+
+
+[article_templating_engines]: http://fabien.potencier.org/article/34/templating-engines-in-php
+[Twig]: http://twig.sensiolabs.org/
+[Brainy]: https://github.com/box/brainy
+[Smarty]: http://www.smarty.net/
+[Mustache]: http://mustache.github.io/

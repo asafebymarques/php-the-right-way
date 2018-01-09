@@ -1,49 +1,47 @@
 ---
 layout: page
-title: The Basics
+title:  The Basics
+sitemap: true
 ---
 
-# O Básico
+# The Basics
 
-## Operadores de Comparação
+## Comparison operators
 
-Operadores de Comparação são frequentemente negligenciados em PHP, o que pode levar a muitos resultados inesperados. Um
-desses problemas decorre de comparações estritas (comparações entre booleanos e inteiros).
+Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
+problem stems from strict comparisons (the comparison of booleans as integers).
 
 {% highlight php %}
 <?php
-$a = 5;   // 5 como inteiro
+$a = 5;   // 5 as an integer
 
-var_dump($a == 5);       // comparação de valores; retorna true
-var_dump($a == '5');     // comparação de valores (ignorando os tipos); retorna true
-var_dump($a === 5);      // comparação de tipos e valores (integer vs. integer); retorna true
-var_dump($a === '5');    // comparação de tipos e valores (integer vs. string); retorna false
+var_dump($a == 5);       // compare value; return true
+var_dump($a == '5');     // compare value (ignore type); return true
+var_dump($a === 5);      // compare type/value (integer vs. integer); return true
+var_dump($a === '5');    // compare type/value (integer vs. string); return false
 
-/**
- * Comparações Estritas
- */
-if (strpos('testing', 'test')) {    // 'test' é encontrado na posição 0, que é interpretado como o booleano 'false'
-    // código...
+//Equality comparisons
+if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
+    // code...
 }
 
-vs.
-
-if (strpos('testing', 'test') !== false) {    // true, já que uma comparação estrita foi feita (0 !== false)
-    // código...
+// vs. strict comparisons
+if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
+    // code...
 }
 {% endhighlight %}
 
-* [Operadores de Comparação](http://php.net/language.operators.comparison)
-* [Tabela de Comparação](http://php.net/types.comparisons)
+* [Comparison operators](http://php.net/language.operators.comparison)
+* [Comparison table](http://php.net/types.comparisons)
+* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
 
-## Estrutura de Controle
+## Conditional statements
 
-### Estruturas Condicionais
+### If statements
 
-Quando as declarações 'if/else' são usadas em uma função ou classe, é um equívoco comum pensar que 'else' precisa ser
-usado em conjunto para declarar resultados em potencial. Entretanto se o resultado serve para definir o valor a ser
-retornado 'else' não é necessário já que 'return' irá terminar a função, fazendo com que o uso de 'else' se torne
-discutível.
+While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
+in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
+necessary as 'return' will end the function, causing 'else' to become moot.
 
 {% highlight php %}
 <?php
@@ -56,58 +54,65 @@ function test($a)
     }
 }
 
-// vs
+// vs.
 
 function test($a)
 {
     if ($a) {
         return true;
     }
-    return false;    // else não é necessário
+    return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
-* [Estrutura Condicionais](http://php.net/control-structures.if)
+* [If statements](http://php.net/control-structures.if)
 
-### Estruturas de Decisão
+### Switch statements
 
-Estruturas de decisão são uma excelente forma de evitar escrever intermináveis estruturas condicionais, mas existem
-alguns pontos sobre os quais deve-se ficar atento:
+Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
 
-- Estruturas de decisão só comparam valores, e não tipos (equivalente a '==')
-- Elas passam por caso a caso até que uma correspondencia seja encontrada, então default é usado (caso esteja definido)
-- Sem que haja um 'break', elas continuarão a executar cada caso até que encontrem um break/return
-- Dentro de uma função o uso de 'return' remove a necessidade do uso de 'break' já que isso encerra essa função
+- Switch statements only compare values, and not the type (equivalent to '==')
+- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
+- Without a 'break', they will continue to implement each case until reaching a break/return
+- Within a function, using 'return' alleviates the need for 'break' as it ends the function
 
 {% highlight php %}
 <?php
-$answer = test(2);    // tanto o código para o 'case 2' quanto para o 'case 3' será executado
+$answer = test(2);    // the code from both 'case 2' and 'case 3' will be implemented
 
 function test($a)
 {
     switch ($a) {
         case 1:
-            // código...
-            break;             // break é usado para terminar a estrutura de decisão
+            // code...
+            break;             // break is used to end the switch statement
         case 2:
-            // código...       // sem o break, a comparação ira continuar em 'case 3'
+            // code...         // with no break, comparison will continue to 'case 3'
         case 3:
-            // código...
-            return $result;    // dentro de uma função, 'return' termina essa função
+            // code...
+            return $result;    // within a function, 'return' will end the function
         default:
-            // código...
+            // code...
             return $error;
     }
 }
 {% endhighlight %}
 
-* [Estruturas de Decisão](http://php.net/control-structures.switch)
-* [PHP Switch](http://phpswitch.com/)
+* [Switch statements](http://php.net/control-structures.switch)
+* [PHP switch](http://phpswitch.com/)
 
-## Namespace Global
+## Global namespace
 
-Quando estiver usando namespaces você pode reparar que funções internas ficam escondidas por funções que você mesmo
-escreveu. Para corrigir isso refira a funções globais através do uso de uma contra-barra antes do nome da função.
+When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
+the global function by using a backslash before the function name.
 
 {% highlight php %}
 <?php
@@ -115,90 +120,90 @@ namespace phptherightway;
 
 function fopen()
 {
-    $file = \fopen();    // O nome da nossa função é igual a de uma função interna.
-                         // Execute a função global através da inclusão de '\'.
+    $file = \fopen();    // Our function name is the same as an internal function.
+                         // Execute the function from the global space by adding '\'.
 }
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator é uma classe interna. Usar seu nome sem uma contra-barra
-                                         // tentará localizar essa função dentro do namespace
+    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
+                                         // will attempt to resolve it within your namespace.
 }
 {% endhighlight %}
 
-* [Espaço Global](http://php.net/language.namespaces.global)
-* [Regras Globais](http://php.net/userlandnaming.rules)
+* [Global space](http://php.net/language.namespaces.global)
+* [Global rules](http://php.net/userlandnaming.rules)
 
 ## Strings
 
-### Concatenação
+### Concatenation
 
-- Se sua linha passar do tamanho recomendado (120 caracteres), considere concatenar sua linha
-- Para facilitar a leitura é melhor usar operadores de concatenação do que operadores de concatenação e atribuição
-- Enquanto dentro do escopo original da variável, indente quando a concatenação usar uma nova linha
+- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
+- For readability it is best to use concatenation operators over concatenating assignment operators
+- While within the original scope of the variable, indent when concatenation uses a new line
 
 
 {% highlight php %}
 <?php
-$a  = 'Multi-line example';    // operador de concatenação e atribuição (.=)
+$a  = 'Multi-line example';    // concatenating assignment operator (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
-vs.
+// vs
 
-$a = 'Multi-line example'      // operador de concatenação (.)
-    . "\n"                     // indentando novas linhas
+$a = 'Multi-line example'      // concatenation operator (.)
+    . "\n"                     // indenting new lines
     . 'of what to do';
 {% endhighlight %}
 
-* [Operadores de Strings](http://php.net/language.operators.string)
+* [String Operators](http://php.net/language.operators.string)
 
-### Tipos de Strings
+### String types
 
-Tipos de string são uma característica constante na comunidade PHP, mas talvez essa seção possa explicar as diferenças
-entre os tipos de strings e seus usos e benefícios.
+Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
+strings and they offer slightly different syntax, with slightly different behaviors.
 
-#### Aspas Simples
+#### Single quotes
 
-As aspas simples são utilizadas para indicar uma 'string literal'. Strings literais não tentam analisar caracteres 
-especiais ou variáveis.
+Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
+variables.
 
-Se estiver usando aspas simples, você pode digitar um nome de variável em uma string assim: `'some $thing'` e você verá 
-a saída exata `some $thing`. Se você estiver usando aspas duplas, o motor da linguagem tentará avaliar a variável "$thing" e então 
-exibirá erros se nenhuma variável for encontrada.
+If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
+exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
+errors if no variable was found.
+
 
 {% highlight php %}
 <?php
-echo 'This is my string, look at how pretty it is.';    // sem necessidade de interpretar uma string simples
+echo 'This is my string, look at how pretty it is.';    // no need to parse a simple string
 
 /**
- * Saída:
+ * Output:
  *
  * This is my string, look at how pretty it is.
  */
 {% endhighlight %}
 
-* [Aspas Simples](http://php.net/language.types.string#language.types.string.syntax.single)
+* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
 
-#### Aspas Duplas
+#### Double quotes
 
-Aspas duplas são o canivete suíço das strings, mas são mais lentas devido a interpretação das strings. Ele não só irá 
-analisar as variáveis como mencionado acima mas também todos os tipos de caracteres especiais, como `\n` para nova 
-linha, `\t` para identação, etc.
+Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
+of special characters, like `\n` for newline, `\t` for a tab, etc.
 
 {% highlight php %}
 <?php
-echo 'phptherightway é ' . $adjective . '.'      // Um exemplo com aspas simples que usa concatenação múltipla para
-    . "\n"                                       // variáveis e escapar strings
+echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
+    . "\n"                                       // variables and escaped string
     . 'I love learning' . $code . '!';
 
 // vs
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // Em vez de concatenação múltipla, aspas duplas
-                                                               // nos permitem utilizar strings interpretáveis
+echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
+                                                               // enables us to use a parsable string
 {% endhighlight %}
 
-Aspas duplas que contém variáveis; Isto é chamado "interpolação".
+Double quotes can contain variables; this is called "interpolation".
 
 {% highlight php %}
 <?php
@@ -206,10 +211,10 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-Quando usando interpolação, são comuns os casos onde a variável pode estar colada com outro
-caracter. Isso fará com que o PHP não consiga interpretar essa variável pelo fato dela estar sendo camuflada. 
+When using interpolation, it is often the case that the variable will be touching another character. This will result
+in some confusion as to what is the name of the variable, and what is a literal character.
 
-Para corrigir esse problema envolva a variável em um par de chaves.
+To fix this problem, wrap the variable within a pair of curly brackets.
 
 {% highlight php %}
 <?php
@@ -222,28 +227,28 @@ $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice will be parsed
 
 /**
- * Variáveis complexas também serão interpretadas com o uso de chaves
+ * Complex variables will also be parsed within curly brackets
  */
 
 $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
-* [Aspas Duplas](http://php.net/language.types.string#language.types.string.syntax.double)
+* [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
-#### Sintaxe Nowdoc
+#### Nowdoc syntax
 
-A Sintaxe Nowdoc foi introduzida no PHP 5.3 e internamente se comporta da mesma forma que as aspas simples exceto que é
-adequada para o uso de strings de múltiplas linhas sem a necessidade de concatenação.
+Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
+use of multi-line strings without the need for concatenating.
 
 {% highlight php %}
 <?php
-$str = <<<'EOD'            // iniciada por <<<
+$str = <<<'EOD'             // initialized by <<<
 Example of string
 spanning multiple lines
 using nowdoc syntax.
 $a does not parse.
-EOD;                       // fechando 'EOD' precisa estar na sua própria linha, e no ponto mais a esquerda
+EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
 
 /**
  * Output:
@@ -255,23 +260,23 @@ EOD;                       // fechando 'EOD' precisa estar na sua própria linha
  */
 {% endhighlight %}
 
-* [Sintaxe Nowdoc](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
+* [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Sintaxe Heredoc
+#### Heredoc syntax
 
-A Sintaxe Heredoc se comporta internamente da mesma forma que as aspas duplas exceto que é adequada para o uso de strings
-de múltiplas linhas sem a necessidade de concatenação.
+Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
+strings without the need for concatenating.
 
 {% highlight php %}
 <?php
 $a = 'Variables';
 
-$str = <<<EOD             // iniciada por <<<
+$str = <<<EOD               // initialized by <<<
 Example of string
 spanning multiple lines
 using heredoc syntax.
 $a are parsed.
-EOD;                      // fechando 'EOD' precisa estar na sua própria linha, e no ponto mais a esquerda
+EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
 
 /**
  * Output:
@@ -283,26 +288,31 @@ EOD;                      // fechando 'EOD' precisa estar na sua própria linha,
  */
 {% endhighlight %}
 
-* [Sintaxe Heredoc](http://php.net/language.types.string#language.types.string.syntax.heredoc)
+* [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### O que é mais rápido?
+### Which is quicker?
 
-Há um mito por aí que usar aspas simples em strings são interpretadas mais rápida do que usar aspas duplas. Isso não é fundamentalmente falso.
+There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
+fundamentally not true.
 
-Se você estiver definindo uma string única e não concatenar valores ou qualquer coisa complicada, então aspas simples ou duplas serão idênticas. Não será mais rápido.
+If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
+or double quoted string will be entirely identical. Neither are quicker.
 
-Se você está concatenando várias strings de qualquer tipo, ou interpolar valores em uma string entre aspas duplas, então os resultados podem variar. Se você estiver trabalhando com um pequeno número de valores, a concatenação é minuciosamente mais rápida. Com um monte de valores, interpolação é minuciosamente mais rápida.
+If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
+results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
+values, interpolating is minutely faster.
 
-Independentemente do que você está fazendo com strings, nenhum dos tipos vai ter qualquer impacto perceptível sobre a sua aplicação.
-Tentar reescrever código para usar um ou o outro é sempre um exercício de futilidade, de modo a evitar este micro-otimização, a menos que você realmente compreenda o significado e o impacto das diferenças.
+Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
+optimization unless you really understand the meaning and impact of the differences.
 
-[Desmentindo o mito de desempenho das aspas simples]: http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html
+* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
-## Operadores Ternários
+## Ternary operators
 
-O uso de operadores ternários é uma ótima forma de condensar seu código, mas eles são geralmente usados em excesso.
-Apesar de operações ternárias poderem ser agrupadas e aconselhado usar uma por linha para aumentar a legibilidade.
+Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
+stacked/nested, it is advised to use one per line for readability.
 
 {% highlight php %}
 <?php
@@ -310,90 +320,95 @@ $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
 {% endhighlight %}
 
-// vs
+In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
 
 {% highlight php %}
-$b = 10;
-echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excesso de agrupamento sacrifica a legibilidade
+<?php
+echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
-Para usar 'return' em um operador ternário utilize a sintaxe correta.
+To 'return' a value with ternary operators use the correct syntax.
 
 {% highlight php %}
 <?php
 $a = 5;
-echo ($a == 5) ? return true : return false;    // esse exemplo irá disparar um erro
+echo ($a == 5) ? return true : return false;    // this example will output an error
 
 // vs
 
 $a = 5;
-return ($a == 5) ? 'yay' : 'nope';    // esse exemplo irá retornar 'yay'
+return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+
 {% endhighlight %}
 
-Note que você não precisa usar um operador ternário para retornar um valor booleano. Um exemplo disto seria.
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
+would be.
 
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? true : false; // esse exemplo irá retornar true ou false se $a == 3
+return ($a == 3) ? true : false; // Will return true or false if $a == 3
 
 // vs
 
 $a = 3;
-return $a == 3; // esse exemplo irá retornar true ou false se $a == 3
+return $a == 3; // Will return true or false if $a == 3
 
 {% endhighlight %}
 
-Isso também pode ser dito para as operações (===, !==, !=, == etc).
+This can also be said for all operations(===, !==, !=, == etc).
 
-#### Utilizando parênteses com operadores ternários para formato e função
+#### Utilising brackets with ternary operators for form and function
 
-Quando se utiliza um operador ternário, os parênteses podem melhorar a legibilidade do código e também incluir as uniões 
-dentro de blocos de instruções. Um exemplo de quando não há nenhuma exigência para usar de parênteses é:
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
+within blocks of statements. An example of when there is no requirement to use bracketing is:
 
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? "yay" : "nope"; // vai retornar yay ou nope se $a == 3
+return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
 
 // vs
 
 $a = 3;
-return $a == 3 ? "yay" : "nope"; // vai retornar yay ou nope se $a == 3
+return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
 {% endhighlight %}
 
-O uso de parênteses também nos dá a capacidade de criar união dentro de um bloco de declaração onde o bloco será 
-verificado como um todo. Tal como este exemplo abaixo que retornará verdadeiro se ambos ($a == 3 e $b == 4) são 
-verdadeiras e $c == 5 também é verdadeiro.
+Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
+as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
+also true.
 
 {% highlight php %}
 <?php
 return ($a == 3 && $b == 4) && $c == 5;
 {% endhighlight %}
 
-Outro exemplo é o trecho de código abaixo que vai returnar true se ($a != 3 e $b != 4) ou $c == 5.
+Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
 
 {% highlight php %}
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-* [Operadores Ternários](http://php.net/language.operators.comparison)
+Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
+Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
 
-## Declaração de Variáveis
+* [Ternary operators](http://php.net/language.operators.comparison)
 
-As vezes  programadores tentam tornar seu código mais limpo declarando variáveis predefinidas com um nome diferente. O
-que isso faz na realidade e dobrar o consumo de memória do script. No exemplo abaixo, digamos que uma string de exemplo
-contém 1MB de dado válido, copiando a variável você aumenta o consumo de memória durante a execução para 2MB.
+## Variable declarations
+
+At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
+this does in reality is to double the memory consumption of said script. For the example below, let us say an example
+string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
 
 {% highlight php %}
 <?php
-$about = 'Uma string com texto bem longo';    // usa 2MB de memória
+$about = 'A very long string of text';    // uses 2MB memory
 echo $about;
 
 // vs
 
-echo 'Uma string com texto bem longo';        // usa 1MB de memória
+echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Dicas de Performance](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)

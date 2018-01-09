@@ -1,13 +1,12 @@
 ---
-title: Leitura Adicional
 isChild: true
-anchor: leitura_adicional
+anchor:  further_reading
 ---
 
-## Leitura Adicional {#leitura_adicional_title}
+## Further Reading {#further_reading_title}
 
-- [Aprenda sobre Dependency Injection e PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
-- [O que é Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
-- [Dependency Injection: uma analogia](http://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
-- [Dependency Injection: Huh?](http://net.tutsplus.com/tutorials/php/dependency-injection-huh/)
-- [Dependency Injection como uma ferramenta para testes](http://www.happyaccidents.me/dependency-injection-as-a-tool-for-testing/)
+* [Learning about Dependency Injection and PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
+* [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
+* [Dependency Injection: An analogy](https://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
+* [Dependency Injection: Huh?](http://net.tutsplus.com/tutorials/php/dependency-injection-huh/)
+* [Dependency Injection as a tool for testing](https://medium.com/philipobenito/dependency-injection-as-a-tool-for-testing-902c21c147f1)

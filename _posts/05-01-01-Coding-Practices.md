@@ -1,6 +1,5 @@
 ---
-title: Práticas de Codificação
-anchor: praticas_de_codificacao
+anchor: coding_practices
 ---
 
-# Práticas de Codificação {#praticas_de_codificacao_title}
+# Coding Practices {#coding_practices_title}

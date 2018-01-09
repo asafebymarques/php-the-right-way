@@ -1,18 +1,16 @@
 ---
-title: Containers
 isChild: true
-anchor: containers
+anchor:  containers
 ---
 
 ## Containers {#containers_title}
 
-A primeira coisa que você deve entender sobre os Containers da Dependency Injection é que eles não são a mesma coisa
-que ela. Um container é um utilitário de conveniência que nos ajuda implementar a Dedepency Injection, no entanto, eles
-podem ser, e muitas vezes são, uma implementação anti-pattern, Service Location (Serviço de Localização).
-Injetar um container DI como um Localizador de Serviço para suas classes, sem dúvida, cria uma dependência difícil de
-substituir no container. Isso também torna seu código menos transparente e, finalmente, mais difícil de testar.
+The first thing you should understand about Dependency Injection Containers is that they are not the same thing as
+Dependency Injection. A container is a convenience utility that helps us implement Dependency Injection, however, they
+can be and often are misused to implement an anti-pattern, Service Location. Injecting a DI container as a Service
+Locator in to your classes arguably creates a harder dependency on the container than the dependency you are replacing.
+It also makes your code much less transparent and ultimately harder to test.
 
-A maioria dos frameworks têm seu próprio Container de Dependency Injection que permite ligar suas dependências em
-conjunto, através de configuração.
-O que isto significa, na prática, que você pode escrever o código da aplicação tão limpo e desacoplado como do framework
-foi construído.
+Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together
+through configuration. What this means in practice is that you can write application code that is as clean and de-
+coupled as the framework it is built on.

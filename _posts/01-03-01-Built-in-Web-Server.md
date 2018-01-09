@@ -1,18 +1,19 @@
 ---
-title: Servidor web embutido
+title:   Built-in Web Server
 isChild: true
-anchor: servidor_web_embutido
+anchor:  builtin_web_server
 ---
 
-## Servidor web embutido {#servidor_web_embutido_title}
+## Built-in web server {#builtin_web_server_title}
 
-Com a versão PHP 5.4+, você pode começar a aprender PHP sem os problemas de instalar e configurar um servidor web. Para 
-iniciar o servidor, execute o seguinte comando no seu terminal dentro da raiz de seu projeto:
+With PHP 5.4 or newer, you can start learning PHP without installing and configuring a full-fledged web server.
+To start the server, run the following command from your terminal in your project's web root:
 
 {% highlight console %}
 > php -S localhost:8000
 {% endhighlight %}
 
-* [Saiba mais sobre o servidor web embutido, pela linha de comando][cli-server]
+* [Learn about the built-in, command line web server][cli-server]
 
-[cli-server]: http://php.net/manual/pt_BR/features.commandline.webserver.php
+
+[cli-server]: http://php.net/features.commandline.webserver

@@ -1,16 +1,15 @@
 ---
-title: Conceito Básico
 isChild: true
-anchor: conceito_basico
+anchor:  basic_concept
 ---
 
-## Conceito Básico {#conceito_basico_title}
+## Basic Concept {#basic_concept_title}
 
-Demostraremos o conceito com um simples exemplo.
+We can demonstrate the concept with a simple, yet naive example.
 
-Temos uma classe `Database` que requer um adaptador para se comunicar com o banco de dados. Instanciaremos o adaptador
-no construtor e assim criamos uma forte de dependência. Isto dificulta os testes e significa que a classe `Database`
-está fortemente acoplada ao adaptador.
+Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the adapter in the
+constructor and create a hard dependency. This makes testing difficult and means the `Database` class is very tightly
+coupled to the adapter.
 
 {% highlight php %}
 <?php
@@ -29,7 +28,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Este código pode ser refatorado para usar a Dependency Injection para desacoplar a dependência.
+This code can be refactored to use Dependency Injection and therefore loosen the dependency.
 
 {% highlight php %}
 <?php
@@ -48,6 +47,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Agora, damos a classe `Database` a sua dependência em vez de criar dentro dela. Poderiamos também, criar um método
-que aceitaria um argumento da dependência e defini-la dessa forma, ou definir a propriedade `$adapter` como `public`
-para defini-la diretamente.
+Now we are giving the `Database` class its dependency rather than creating it itself. We could even create a method
+that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
+could set it directly.

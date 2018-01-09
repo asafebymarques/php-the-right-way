@@ -1,30 +1,33 @@
 ---
-title: Hash de Senhas
 isChild: true
-anchor: hash_de_senhas
+anchor:  password_hashing
 ---
 
-## Hash de Senhas {#hash_de_senhas_title}
+## Password Hashing {#password_hashing_title}
 
-No fim, todos construímos aplicações PHP que dependem de login dos usuários. Usuários e senhas (com hash) são
-armazenadas em um banco de dados e posteriormente são usados para autenticar os usuários no login.
+Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
+database and later used to authenticate users upon login.
 
-É importante que você faça adequadamente o [_hash_][3] das senhas que são armazenadas em um banco de dados. O hash da 
-senha é irreversível, uma função executada contra a senha do usuário. Isto produz uma sequência de comprimento fixo que 
-não pode ser revertido. Isto significa que você pode comparar um hash contra o outro para determinar se ambos foram 
-produzidos da mesma string, mas você não pode determinar o string original.
-Se as senhas não estiverm com hash, e seu banco for hackeado ou acessado por alguém não autorizado, todas as contas dos 
-usuários ficarão comprometidas. Alguns usuários (infelizmente) usam a mesma senha para outros serviços. Por isso, é 
-importante levar segurança a sério.
+It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible,
+one-way function performed against the user's password. This produces a fixed-length string that cannot be feasibly
+reversed. This means you can compare a hash against another to determine if they both came from the same source string,
+but you cannot determine the original string. If passwords are not hashed and your database is accessed by an
+unauthorized third-party, all user accounts are now compromised. 
 
-**Faça o hash das senhas com `password_hash`**
+Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
 
-No PHP 5.5 `password_hash` foi adicionado. Neste momento utiliza o BCrypt, o mais forte algorítimo suportado pelo PHP. 
-Ele será atualizado no futuro para suportar mais algorítimos conforme for preciso.
-A biblioteca `password_compat` foi criada para ter compatibilidade para o PHP >= 5.3.7.
+Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor. 
 
-Abaixo um exemplo, vamos fazer o hash de uma string, e em seguida, verificamos o hash contra uma nova string.
-As duas string são diferentes ('secret-password' vs. 'bad-password') e por isso o login falhará.
+Fortunately, nowadays PHP makes this easy. 
+
+**Hashing passwords with `password_hash`**
+
+In PHP 5.5 `password_hash()` was introduced. At this time it is using BCrypt, the strongest algorithm currently
+supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat`
+library was created to provide forward compatibility for PHP >= 5.3.7.
+
+Below we hash a string, and then check the hash against a new string. Because our two source strings are different
+('secret-password' vs. 'bad-password') this login will fail.
 
 {% highlight php %}
 <?php
@@ -33,18 +36,23 @@ require 'password.php';
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
 if (password_verify('bad-password', $passwordHash)) {
-    //Senha correta
+    // Correct Password
 } else {
-    //Senha errada
+    // Wrong password
 }
-{% endhighlight %}
+{% endhighlight %}  
 
-* [Aprenda sobre `password_hash`] [1]
-* [`password_compat` para PHP  >= 5.3.7 && < 5.5] [2]
-* [Aprenda sobre hashing no que diz respeito à criptografia] [3]
-* [PHP `password_hash` RFC] [4]
+`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts. 
+
+* [Learn about `password_hash()`] [1]
+* [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
+* [Learn about hashing in regards to cryptography] [3]
+* [Learn about salts] [5]
+* [PHP `password_hash()` RFC] [4]
+
 
 [1]: http://php.net/function.password-hash
 [2]: https://github.com/ircmaxell/password_compat
 [3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
 [4]: https://wiki.php.net/rfc/password_hash
+[5]: https://en.wikipedia.org/wiki/Salt_(cryptography)

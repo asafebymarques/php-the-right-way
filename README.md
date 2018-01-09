@@ -1,92 +1,91 @@
-# PHP: Do Jeito Certo
+# PHP: The Right Way
 
-## Sobre
+## Overview
 
-Este é o repositório GitHub Pages para o projeto _PHP: Do Jeito Certo_, tradução brasileira do projeto _PHP: The Right Way_.
+This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
-* Este website é um projeto Jekyll.
-* Cada seção e sub-seção são arquivos Markdown em `_posts/`.
-* Sub-seções possuem `isChild: true` em seu front matter.
-* Navegação e estrutura de páginas são geradas automaticamente.
+* This website is a Jekyll project.
+* Each section and sub-section are a Markdown file in `_posts/`.
+* Sub-sections have `isChild: true` in their front matter.
+* The navigation and page structure are automatically generated.
 
-## Espalhe a palavra!
+## Spread the Word!
 
-_PHP: Do Jeito Certo_ possui banners que você pode usar em seu site. Para mostrar seu apoio, deixe que novos desenvolvedores PHP saibam onde encontrar boas informações!
+_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
+developers know where to find good information!
 
-[Banners para divulgação](http://br.phptherightway.com/banners.html)
+[See Banner Images](http://www.phptherightway.com/banners.html)
 
-## Como contribuir
+## How to Contribute
 
-1. Fork e edite
-2. Instale opcionalmente [Ruby](https://rvm.io/rvm/install/) com [Jekyll](https://github.com/mojombo/jekyll/) gem para visualizar
-3. Envie um pull request para consideração
+You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
 
-[Instalar utilizando o Vagrant](vagrant.md)
+1. Fork and edit
+2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
+3. Submit pull request for consideration
 
-## Guia de Estilo para o Contribuidor
+### Contributor Style Guide
 
-1. Use a ortografia do Português do Brasil neste repositório.
-2. Use quatro (4) espaços para indentar o texto; não use TAB.
-3. Limite o texto em 120 caracteres.
-4. Os exemplos de código devem seguir a [PSR-1](http://www.php-fig.org/psr/psr-1/) ou superior.
+1. Use American English spelling (*primary English repo only*)
+2. Use four (4) spaces to indent text; do not use tabs.
+3. Wrap all text to 120 characters.
+4. Code samples should adhere to PSR-1 or higher.
 
-## Onde
+## Where
 
-<http://br.phptherightway.com>
+<http://www.phptherightway.com>
 
-* [Inglês](http://www.phptherightway.com)
-* [Alemão](http://rwetzlmayr.github.io/php-the-right-way)
-* [Búlgaro](http://bg.phptherightway.com)
-* [Chinês (Simplificado)](http://wulijun.github.com/php-the-right-way)
-* [Chinês (Tradicional)](http://laravel-taiwan.github.io/php-the-right-way)
-* [Coreano](http://modernpug.github.io/php-the-right-way)
-* [Esloveno](http://sl.phptherightway.com)
-* [Espanhol](http://phpdevenezuela.github.io/php-the-right-way)
-* [Francês](http://eilgin.github.io/php-the-right-way/)
-* [Indonésio](http://id.phptherightway.com)
+* [English](http://www.phptherightway.com)
+* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
+* [Español](http://phpdevenezuela.github.io/php-the-right-way)
+* [Français](http://eilgin.github.io/php-the-right-way/)
+* [Indonesia](http://id.phptherightway.com)
 * [Italiano](http://it.phptherightway.com)
-* [Japonês](http://ja.phptherightway.com)
-* [Persa](http://novid.github.io/php-the-right-way/)
-* [Polonês](http://pl.phptherightway.com)
-* [Português](http://br.phptherightway.com)
-* [Romeno](https://bgui.github.io/php-the-right-way/)
-* [Russo](http://getjump.github.io/ru-php-the-right-way)
-* [Sérvio](http://smatejic.github.io/php-the-right-way/)
-* [Tailandês](https://apzentral.github.io/php-the-right-way/)
-* [Turco](http://hkulekci.github.io/php-the-right-way/)
-* [Ucraniano](http://iflista.github.com/php-the-right-way)
+* [Polski](http://pl.phptherightway.com)
+* [Português do Brasil](http://br.phptherightway.com)
+* [Română](https://bgui.github.io/php-the-right-way/)
+* [Slovenščina](http://sl.phptherightway.com)
+* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
+* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
+* [български](http://bg.phptherightway.com)
+* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
+* [Українська](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
+* [فارسى](http://novid.github.io/php-the-right-way/)
+* [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way)
+* [日本語](http://ja.phptherightway.com)
+* [简体中文](http://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
+### Translations
 
-## Traduções
+If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
 
-Se você tem interesse em traduzir _PHP: The Right Way_, faça o fork do repo no GitHub e publique seu fork para sua
-própria conta do GitHub. Nós vamos vincular sua tradução a partir do documento principal.
+To avoid fragmentation and reader confusion, please choose one of these options:
 
-Para evitar fragmentação e confusão para o leitor, por favor escolha uma destas opções:
+1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
+2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
 
-1. Vincularemos seu fork com a sua GitHub Page `[username].github.com/php-the-right-way`
-2. Vincularemos seu fork com a sua GitHub Page com um subdomínio (por exemplo, "br.phptherightway.com")
+If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
-Se você usa um subdomínio, coloque-o no arquivo `CNAME`, e avíse-nos para configurar o DNS para você. Se não usa um
-subdomínio, apague o arquivo `CNAME` senão seu fork não vai fazer o build quando for publicado.
+Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-Quando sua tradução estiver pronta, abra uma issue no Isse Tracker para nos avisar.
+When your translation is ready, open an issue on the Issue Tracker to let us know.
 
-[Notas de tradução](notas_de_traducao.md)
+## Why
 
-## Porque?
+There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
 
-Têm havido muita discussão ultimamente sobre como a comunidade PHP carece de informação válida e suficiente para programadores novos no PHP. Este repositório busca resolver este problema.
+## Who
 
-## Quem
+My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
 
-Meu nome é [Josh Lockhart](http://twitter.com/codeguy). Sou o autor do [Slim Framework](http://www.slimframework.com/), e trabalho para a [New Media Campaigns](http://www.newmediacampaigns.com/).
-
-## Colaboradores
+### Collaborators
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## Licença
+## License
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)

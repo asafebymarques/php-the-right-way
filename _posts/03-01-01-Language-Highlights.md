@@ -1,6 +1,5 @@
 ---
-title: Destaques da linguagem
-anchor: destaques_da_linguagem
+anchor: language_highlights
 ---
 
-# Destaques da linguagem {#destaques_da_linguagem_title}
+# Language Highlights {#language_highlights_title}

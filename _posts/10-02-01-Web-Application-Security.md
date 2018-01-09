@@ -1,18 +1,18 @@
 ---
-title: Segurança em uma Aplicação Web
 isChild: true
-anchor: seguranca_em_uma_aplicacao_web
+anchor:  web_application_security
 ---
 
-## Segurança em uma Aplicação Web {#seguranca_em_uma_aplicacao_web_title}
+## Web Application Security {#web_application_security_title}
 
-Existem pessoas ruins prontas e dispostas a invadir sua aplicação web. É importante que você tome as medidas
-necessárias para reforçar a segurança da sua aplicação web. Felizmente, o pessoal bacana da
-[Open Web Application Security Project][1] (OWASP) compilou uma lista abrangente dos problemas de segurança
-conhecidos e dos métodos para se proteger contra eles. É uma leitura obrigatória para o desenvolvedor preocupado com
-segurança.
+There are bad people ready and willing to exploit your web application. It is important that you take necessary
+precautions to harden your web application's security. Luckily, the fine folks at
+[The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and
+methods to protect yourself against them. This is a must read for the security-conscious developer. [Survive The Deep End: PHP Security][3] by Padraic Brady is also another good web application security guide for PHP.
 
-* [Leia o Guia OWASP de Segurança][2]
+* [Read the OWASP Security Guide][2]
+
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
+[3]: http://phpsecurity.readthedocs.org/en/latest/index.html
