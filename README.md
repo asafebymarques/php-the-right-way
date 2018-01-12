@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Este é o repositório GitHub Pages para o projeto _PHP: Do Jeito Certo_, tradução brasileira do projeto _PHP: The Right Way_ project.
+Este é o repositório GitHub Pages para o projeto _PHP: Do Jeito Certo_, tradução brasileira do projeto _PHP: The Right Way_.
 
 * Este website é um projeto Jekyll.
 * Cada seção e subseção são arquivos Markdown em `_posts/`.
@@ -34,7 +34,7 @@ Você deve ler o arquivo `CONTRIBUTING.md` para instruções e dicas precisas. M
 
 ## Onde
 
-<http://br.phptherightway.com>
+<http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
 * [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
@@ -59,34 +59,36 @@ Você deve ler o arquivo `CONTRIBUTING.md` para instruções e dicas precisas. M
 * [简体中文](http://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
-### Translations
+### Traduções
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Caso você esteja interessado em traduzir o _PHP: The Right Way_, faça um fork deste repositório no GitHub e publique-o em sua própria conta do GitHub Pages. Nós vincularemos sua tradução no documento principal.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Para evitar fragmentação e confusão para o leitor, escolha uma dessas opções:
 
-1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Vincularemos ao fork de sua conta no GitHub Pages com `[username].github.io/php-the-right-way`
+2. Vincularemos ao fork de sua conta no GitHub Pages com um subdomínio (por exemplo, "br.phptherightway.com")
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+Caso use um subdomínio, coloque-o no arquivo `CNAME` e peça-nos para configurar o DNS para você. Caso contrário, remova o arquivo `CNAME`, ou seu fork não fará build quando enviado.
 
-Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+Adicione informação sobre sua tradução na [página wiki](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Quando sua tradução estiver pronta, abra uma issue no Issue Tracker para nos avisar.
 
-## Why
+[Notas de tradução](notas_de_traducao.md)
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+## Porque
 
-## Who
+Tem havido muita discussão sobre como a comunidade PHP necessita de informação confiável e suficiente para novos em PHP. Este repositório busca resolver esse problema.
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+## Quem
 
-### Collaborators
+Meu nome é [Josh Lockhart](http://twitter.com/codeguy). Sou o autor do [Slim Framework](http://www.slimframework.com/) e trabalho para a [New Media Campaigns](http://www.newmediacampaigns.com/).
+
+### Colaboradores
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## License
+## Licença
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
