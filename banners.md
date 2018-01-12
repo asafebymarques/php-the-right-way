@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Website Banners
-description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
+title: Banners web
+description: "Espalhe a palavra! Use estes banners para que novos programadores PHP saibam sobre o projeto PHP: The Right Way"
 sitemap: true
 ---
 
-# Web Banners
+# Banners web
 
-Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
+Espalhe a palavra com os banners _PHP: Do Jeito Certo_! Mostre aos novos programadores PHP onde encontrar boa informação.
 
-## Button 1 (120x90)
+## Botão 1 (120x90)
 
 <p><img src="/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/></p>
 
@@ -19,7 +19,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Button 2 (120x60)
+## Botão 2 (120x60)
 
 <p><img src="/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/></p>
 
@@ -39,7 +39,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Large Rectangle (386x280)
+## Retângulo grande (386x280)
 
 <p><img src="/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/></p>
 
@@ -49,7 +49,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Medium Rectangle (300x250)
+## Retângulo médio (300x250)
 
 <p><img src="/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/></p>
 
@@ -59,7 +59,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Rectangle (180x150)
+## Retângulo (180x150)
 
 <p><img src="/images/banners/rect-180x150.png" alt="PHP: The Right Way"/></p>
 
@@ -69,7 +69,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Square Button (125x125)
+## Botão quadrado (125x125)
 
 <p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
 
@@ -79,7 +79,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
 </a>
 {% endhighlight %}
 
-## Vertical Rectangle (240x400)
+## Retângulo vertical (240x400)
 
 <p><img src="/images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/></p>
 
