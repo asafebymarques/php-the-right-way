@@ -26,7 +26,7 @@ _PHP: Do Jeito Certo_ está traduzido em vários idiomas:
 * [Indonesia](http://id.phptherightway.com)
 * [Italiano](http://it.phptherightway.com)
 * [Polski](http://pl.phptherightway.com)
-* [Português do Brasil](http://br.phptherightway.com)
+* [Português (Brasil)](http://br.phptherightway.com)
 * [Română](https://bgui.github.io/php-the-right-way/)
 * [Slovenščina](http://sl.phptherightway.com)
 * [Srpski](http://phpsrbija.github.io/php-the-right-way/)
