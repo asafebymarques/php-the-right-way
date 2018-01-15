@@ -4,19 +4,20 @@ title:  Design Patterns
 sitemap: true
 ---
 
-# Design Patterns
+# Padrões de Projeto (Design Patterns)
 
-There are numerous ways to structure the code and project for your web application, and you can put as much or as little thought as you like into architecting. But it is usually a good idea to follow common patterns because it will
-make your code easier to manage and easier for others to understand.
+Existem inúmeras maneiras de estruturar o código e o projeto para sua aplicação web, você pode colocar muito ou pouco 
+esforço em sua arquitetura. Mas, geralmente, é uma boa idéia seguir padrões comuns, pois isso fará o seu código mais 
+fácil de manter e ser entendido por outras pessoas.
 
-* [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
-* [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
+* [Padrão de arquitetura na Wikipédia](https://en.wikipedia.org/wiki/Architectural_pattern)
+* [Padrão de design de software na Wikipédia](https://en.wikipedia.org/wiki/Software_design_pattern)
+* [Coleção de exemplos de implementação](http://designpatternsphp.readthedocs.io/en/latest/)
 
 ## Factory
 
-One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates the
-object you want to use. Consider the following example of the factory pattern:
+Um dos padrões de projeto mais utilizados é o padrão Factory. Nele, uma classe simplesmente cria o objeto que você quer 
+utilizar. Veja exemplo a seguir:
 
 {% highlight php %}
 <?php
@@ -61,7 +62,7 @@ Using the factory pattern isn't always necessary (or wise). The example code use
 would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
 yourself a lot of trouble down the road by using factories.
 
-* [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
+* [Padrão Factory na Wikipédia](https://en.wikipedia.org/wiki/Factory_pattern)
 
 ## Singleton
 
@@ -93,7 +94,7 @@ application, reducing testability. In most cases, dependency injection can (and 
 class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
-* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+* [Padrão Singleton na Wikipédia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
 ## Strategy
 
@@ -184,7 +185,7 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+* [Padrão Strategy na Wikipédia](http://en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 
@@ -193,7 +194,7 @@ handles all of the requests. This code is responsible for loading all of the dep
 sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
 and gives you a central place to hook in code that should be run for every request (such as input sanitization).
 
-* [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
+* [Padrão Front Controller na Wikipédia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
 ## Model-View-Controller
 
